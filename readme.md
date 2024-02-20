@@ -20,7 +20,7 @@ You just need to invite to your server, currently the option is not available, a
 > Currently in development, any idea is welcome!
 
 ### **Active Functions:**
-* **Commands:** 
+* **Commands:** test
 * **Components:**
 * **Events:** 
 * **Tools:**
@@ -28,7 +28,7 @@ You just need to invite to your server, currently the option is not available, a
 ### **Functions in development:** 
 * **Commands:**
 * **Component:** 
-* **Events:**
+* **Events:** Presence
 * **Tools:**
 
 ### **Planned functions:**
