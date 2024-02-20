@@ -15,7 +15,7 @@ module.exports = {
       .setTitle("🏓Pong!")
       .setThumbnail( client.user.displayAvatarURL())
       .setColor(mainColor)
-      .addFields({name: 'Requesy by:', value: `{interaction.user.tag}`})
+      .addFields({name: 'Requesy by:', value: `${interaction.user.tag}`})
     await interaction.reply({
       embeds: [embedPing],
     });
