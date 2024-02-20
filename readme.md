@@ -34,5 +34,5 @@ You just need to invite to your server, currently the option is not available, a
 ### **Planned functions:**
 * **Commands:** leaderboard, partyorganization, welcomeMessage, ping, guildstats
 * **Component:** Menu_Row
-* **Events:** memberJoin
+* **Events:** memberJoin, clientReady, createInteraction
 * **Tools:**
