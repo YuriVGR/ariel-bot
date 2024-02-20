@@ -26,7 +26,7 @@ You just need to invite to your server, currently the option is not available, a
 * **Tools:**
 
 ### **Functions in development:** 
-* **Commands:**
+* **Commands:** purge
 * **Component:** 
 * **Events:** presence
 * **Tools:**
