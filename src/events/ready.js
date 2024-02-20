@@ -2,7 +2,7 @@ module.exports = {
     name: 'ready',
     once: true,
     async execute(client) {
-        console.log('Ready!');
+        console.log(`✅ ${client.user.tag} is logged in on discord`);
 
         async function pickPresence () {
             const option = Math.floor(Math.random() * statusArray.length);
