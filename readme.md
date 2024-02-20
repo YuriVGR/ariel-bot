@@ -22,17 +22,17 @@ You just need to invite to your server, currently the option is not available, a
 ### **Active Functions:**
 * **Commands:** test, ping
 * **Components:**
-* **Events:** 
+* **Events:** clientReady
 * **Tools:**
 
 ### **Functions in development:** 
 * **Commands:**
 * **Component:** 
-* **Events:** Presence
+* **Events:** presence
 * **Tools:**
 
 ### **Planned functions:**
 * **Commands:** leaderboard, partyorganization, welcomeMessage, guildstats
 * **Component:** Menu_Row
-* **Events:** memberJoin, clientReady, createInteraction
+* **Events:** memberJoin, createInteraction
 * **Tools:**
