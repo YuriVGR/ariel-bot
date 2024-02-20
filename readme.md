@@ -10,7 +10,7 @@ Elsword themed bot with the purpose of being an all-in-one management/organizati
 
 ## Requirements | How to use ?
 
-**Link:** _`Test bot, probably won't be avaible.`_
+_`Test bot, probably won't be avaible.`_
 
 ## Functions | Commands, Components, Events and Tools.
 
