@@ -10,9 +10,7 @@ Elsword themed bot with the purpose of being an all-in-one management/organizati
 
 ## Requirements | How to use ?
 
-You just need to invite to your server, currently the option is not available, as it still is in it's first version, with not even 10 complete commands.
-
-**Link:** _`currently unavaible`_
+**Link:** _`Test bot, probably won't be avaible.`_
 
 ## Functions | Commands, Components, Events and Tools.
 
