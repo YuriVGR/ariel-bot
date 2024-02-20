@@ -10,26 +10,26 @@ const moment = require("moment");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("guildstats")
-    .setDescription("Show the server general stats."),
+    .setDescription("Mostra dados básicos do servidor!"),
   async execute(interaction, client) {
     const embedGuildStats = new EmbedBuilder()
       .setTitle(`*${interaction.guild.name}*`)
-      .setDescription(`Running guildstats for __${interaction.guild.name}__`)
+      .setDescription(`Rodando dados básicos de: __${interaction.guild.name}__`)
       .setThumbnail(client.user.displayAvatarURL())
       .setColor(mainColor)
       .addFields(
         {
-          name: "Requested by:",
-          value: `${interaction.user.tag}`,
+          name: "Solicitado por:",
+          value: `${interaction.user}`,
         },
         {
-          name: "Membercount:",
-          value: `${interaction.guild.memberCount}`,
+          name: "Quantidade de membors:",
+          value: `${interaction.guild.memberCount} membros.`,
           inline: true,
         },
         {
-          name: "User joined at:",
-          value: `${moment.utc(interaction.member.joinedAt).format('MM/DD/YYYY')}`,
+          name: "Usúario entrou em:",
+          value: `${moment.utc(interaction.member.joinedAt).format('DD/MM/YYYY')}`,
           inline: true,
         }
       );

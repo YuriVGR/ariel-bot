@@ -8,16 +8,16 @@ const {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("test")
-    .setDescription("This is a test command."),
+    .setName("teste")
+    .setDescription("Comando para checar se a Ariel Bot está funcionando corretamente."),
   async execute(interaction, client) {
     const embed = new EmbedBuilder()
-      .setTitle("⚡︎ Everything is working.")
-      .setDescription(`Request by **${interaction.user.tag}**`)
+      .setTitle(`✅ ${client.user.username} está funcionando corretamente`)
+      .setDescription(`Solicitado por: **${interaction.user}**`)
       .setThumbnail( client.user.displayAvatarURL())
       .setColor(mainColor)
       .addFields(
-        {name: 'API Latency:', value: `${client.ws.ping}`}
+        {name: 'Latência do API:', value: `${client.ws.ping}`}
       )
     await interaction.reply({
       embeds: [embed],

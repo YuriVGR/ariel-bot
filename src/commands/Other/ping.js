@@ -9,13 +9,13 @@ const {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("ping")
-    .setDescription("Returns with a pong"),
+    .setDescription("Retorna um pong!"),
   async execute(interaction, client) {
     const embedPing = new EmbedBuilder()
       .setTitle("🏓Pong!")
       .setThumbnail( client.user.displayAvatarURL())
       .setColor(mainColor)
-      .addFields({name: 'Requesy by:', value: `${interaction.user.tag}`})
+      .addFields({name: 'Solicitado por:', value: `${interaction.user}`})
     await interaction.reply({
       embeds: [embedPing],
     });

@@ -11,12 +11,12 @@ const {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("purge")
-    .setDescription("Clear a certain amount of messages")
+    .setName("limpar")
+    .setDescription("Limpa uma quantidade especifica de mensagens")
     .addIntegerOption(option =>
       option
-        .setName("amount")
-        .setDescription("The amount of messages to delete")
+        .setName("quantidade")
+        .setDescription("Quantidade de mensagens que deseja deletar")
         .setMinValue(1)
         .setMaxValue(500)
         .setRequired(true)
@@ -28,7 +28,7 @@ module.exports = {
       )
     )
       return interaction.reply({
-        content: "You don't have permission to use this command.",
+        content: "Você não possui permissão para utilizar esse comando..",
         ephemeral: true,
       });
 
@@ -36,20 +36,12 @@ module.exports = {
 
     const embed = new EmbedBuilder()
       .setColor(mainColor)
-      .setDescription(`✅ Deleted ${number} messages`);
+      .setDescription(`✅  **${number}** mensagens deletadas`);
 
     await interaction.channel.bulkDelete(number);
 
-    const button = new ActionRowBuilder().addComponents(
-      new ButtonBuilder()
-        .setCustomId("purge")
-        .setLabel("Confirm")
-        .setStyle(ButtonStyle.Success)
-    );
-
     const message = await interaction.reply({
       embeds: [embed],
-      components: [button],
       ephemeral: true,
     });
 
