@@ -13,23 +13,55 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("purge")
     .setDescription("Clear a certain amount of messages")
-    .addIntegerOption((option) =>
+    .addIntegerOption(option =>
       option
-        .setName("amouut")
+        .setName("amount")
         .setDescription("The amount of messages to delete")
         .setMinValue(1)
         .setMaxValue(500)
-        .required(true)
+        .setRequired(true)
     ),
   async execute(interaction) {
-    if (!interaction.member.permissions.has(PermissionsBitField.Flags.ManageMessages)) return interaction.reply({ content: "You don't have permission", ephemeral: true})
+    if (
+      !interaction.member.permissions.has(
+        PermissionsBitField.Flags.ManageMessages
+      )
+    )
+      return interaction.reply({
+        content: "You don't have permission to use this command.",
+        ephemeral: true,
+      });
 
-    let number = interaction.options.getInteger('amount');
+    let number = interaction.options.getInteger("amount");
 
-    const embed = new EmbedBuilder().setDescription(`✅ Deleted ${number} messages`);
-    
-    await interaction.channel.bulkDelete(number)
+    const embed = new EmbedBuilder()
+      .setColor(mainColor)
+      .setDescription(`✅ Deleted ${number} messages`);
 
-    const button = new ActionRowBuilder().addComponents()
+    await interaction.channel.bulkDelete(number);
+
+    const button = new ActionRowBuilder().addComponents(
+      new ButtonBuilder()
+        .setCustomId("purge")
+        .setLabel("Confirm")
+        .setStyle(ButtonStyle.Success)
+    );
+
+    const message = await interaction.reply({
+      embeds: [embed],
+      components: [button],
+      ephemeral: true,
+    });
+
+    const collector = message.createMessageComponentCollector();
+
+    collector.on("collect", async (i) => {
+      if (i.customId === "purge") {
+        if (!i.member.permissions.has(PermissionsBitField.Flags.ManageMessages))
+          return;
+
+        interaction.deleteReply();
+      }
+    });
   },
 };

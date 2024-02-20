@@ -20,7 +20,7 @@ You just need to invite to your server, currently the option is not available, a
 > Currently in development, any idea is welcome!
 
 ### **Active Functions:**
-* **Commands:** test, ping, guildstats
+* **Commands:** test, ping, guildstats, purge
 * **Components:**
 * **Events:** clientReady
 * **Tools:**
