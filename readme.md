@@ -20,7 +20,7 @@ You just need to invite to your server, currently the option is not available, a
 > Currently in development, any idea is welcome!
 
 ### **Active Functions:**
-* **Commands:** test, ping
+* **Commands:** test, ping, guildstats
 * **Components:**
 * **Events:** clientReady
 * **Tools:**
@@ -32,7 +32,7 @@ You just need to invite to your server, currently the option is not available, a
 * **Tools:**
 
 ### **Planned functions:**
-* **Commands:** leaderboard, partyorganization, welcomeMessage, guildstats
+* **Commands:** leaderboard, partyorganization, welcomeMessage
 * **Component:** Menu_Row
 * **Events:** memberJoin, createInteraction
 * **Tools:**
