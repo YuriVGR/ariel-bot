@@ -32,7 +32,7 @@ module.exports = {
         ephemeral: true,
       });
 
-    let number = interaction.options.getInteger("amount");
+    let number = interaction.options.getInteger("quantidade");
 
     const embed = new EmbedBuilder()
       .setColor(mainColor)
