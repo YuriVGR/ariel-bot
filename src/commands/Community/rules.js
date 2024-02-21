@@ -6,6 +6,7 @@ const {
   ActionRowBuilder,
   ButtonStyle,
   EmbedBuilder,
+  Attachment,
 } = require("discord.js");
 
 module.exports = {
@@ -13,6 +14,9 @@ module.exports = {
     .setName("regras")
     .setDescription("Não utilize fora do chat de regras"),
   async execute(interaction, client) {
+    const imgembed = new EmbedBuilder()
+      .setImage("https://i.imgur.com/TeuUM7V.png")
+      .setColor(mainColor);
     const embed = new EmbedBuilder()
       .setTitle("☆ Regras ☆")
       .setThumbnail(client.user.displayAvatarURL())
@@ -32,10 +36,15 @@ module.exports = {
       new ButtonBuilder()
         .setCustomId("rulebutton")
         .setLabel("Punições")
-        .setEmoji("1209675104930496512")
         .setStyle(ButtonStyle.Primary)
     );
+
     await interaction.channel.send({
+      content: "https://i.imgur.com/TeuUM7V.png",
+    });
+
+    await interaction.channel.send({
+      content: '☆ Seja bem vindo ao meu servidor, não tenha medo de contatar um admin caso tenha qualquer dúvida ☆',
       embeds: [embed],
       components: [button],
     });

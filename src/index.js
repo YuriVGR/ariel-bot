@@ -48,6 +48,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
       "Como miramos numa comunidade organizada, deixaremos aqui explicado como funcionam algumas das punições"
     )
     .setColor(process.env.color)
+    .setThumbnail(client.user.displayAvatarURL())
     .addFields(
       { name: "Spam", value: "Anúncio sem solicitação de um Admin" },
       {
