@@ -18,13 +18,13 @@ _`Test bot, probably won't be avaible.`_
 > Currently in development, any idea is welcome!
 
 ### **Active Functions:**
-* **Commands:** test, ping, guildstats, purge
-* **Components:**
+* **Commands:** test, ping, guildstats, purge, rules
+* **Components:** permanentButton (linked to rules)
 * **Events:** clientReady
 * **Tools:**
 
 ### **Functions in development:** 
-* **Commands:** purge
+* **Commands:** 
 * **Component:** 
 * **Events:** presence
 * **Tools:**
