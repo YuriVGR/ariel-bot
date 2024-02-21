@@ -36,7 +36,7 @@ module.exports = {
 
     const embed = new EmbedBuilder()
       .setColor(mainColor)
-      .setDescription(`✅  **${number}** mensagens deletadas`);
+      .setDescription(`✅ **${number}** mensagens deletadas`);
 
     await interaction.channel.bulkDelete(number);
 
