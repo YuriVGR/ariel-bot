@@ -5,7 +5,9 @@ Hi, this is my Discord Bot, Ariel Bot! Currently in development, it is a project
 <img src='https://i.imgur.com/05NjUl6.png' width="300px">
 
 > [!WARNING]
-> Remember, it is currently in development, and I'm still a beginner in Javascript.
+> 1. Remember, it is currently in development, and I'm still a beginner in Javascript.
+> 2. It will only be fully released after I actually learn some Javascript, and not depending on pre-made codes.
+
 
 ## Concept:
 Inspired by Ariel from [Elsword](https://en.elsword.gameforge.com/news/archive)
