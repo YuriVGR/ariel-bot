@@ -3,13 +3,16 @@ require("dotenv").config();
 const { token, guildID, clientID, color } = process.env;
 const {
   Client,
-  Collection,
   GatewayIntentBits,
-  IntentsBitField,
-  Events
+  EmbedBuilder,
+  PermissionsBitField,
+  Permissions,
+  MessageManager,
+  Embed,
+  Collection,
+  Events,
 } = require("discord.js");
 const fs = require("fs");
-
 
 // Declaring intents | Permissions
 const client = new Client({
@@ -20,13 +23,6 @@ const client = new Client({
     GatewayIntentBits.MessageContent,
   ],
 });
-
-
-
-
-
-
-
 
 // Login Event and confirmation
 
